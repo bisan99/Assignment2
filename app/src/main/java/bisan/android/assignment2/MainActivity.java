@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         textBMI = findViewById(R.id.txtBMI);
         spGender = findViewById(R.id.spGender);
         spGender.setOnItemSelectedListener(this);
-        txtGe = (TextView) findViewById(R.id.txtGe);
+        txtGe =  findViewById(R.id.txtGe);
         txtres = findViewById(R.id.txtres);
         dataAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, gender);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -75,8 +75,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //SAVE
     private void checkPrefs(){
-//        String text = spGender.getSelectedItem().toString();
-
 
             String name = prefs.getString(NAME,"");
             String height = prefs.getString(HEIGHT,"");
