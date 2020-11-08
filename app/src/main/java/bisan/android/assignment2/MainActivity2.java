@@ -39,15 +39,14 @@ public class MainActivity2 extends AppCompatActivity {
     public void onClickStart(View view) {
         running = true;
         String str = edtTime.getText().toString();
-        if(!str.isEmpty() && str.length()==8)
+        if(running == true && !str.isEmpty() && str.length()==8)
             runTimer();
         else
             edtTime.setText("error");
     }
 
     public void onClickStop(View view) {
-        running = false;
-        seconds= 0;
+
     }
     public void onClickPause(View view) {
         running = false;
